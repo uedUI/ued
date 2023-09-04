@@ -1,4 +1,5 @@
 export default {
+  base: process.env.NODE_ENV === 'production' ? '/uedUI/' : '/',
   themeConfig: {
     siteTitle: "vitepress",
     nav: [
