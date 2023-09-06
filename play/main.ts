@@ -1,7 +1,7 @@
-import { createApp } from "vue";
-import App from "./app.vue";
+import { createApp } from 'vue'
+import App from './app.vue'
 import ued from '@ued/components'
 
-const app = createApp(App);
+const app = createApp(App)
 app.use(ued)
-app.mount("#app");
+app.mount('#app')

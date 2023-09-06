@@ -1,23 +1,23 @@
 // button.vue
 <template>
-  <button class="ued-button" :class="buttonStyle">
-    <slot />
-  </button>
+	<button class="ued-button" :class="buttonStyle">
+		<slot />
+	</button>
 </template>
 
 <script lang="ts" setup>
-import "./style/index.less";
-import { computed } from "vue";
+import './style/index.less'
+import { computed } from 'vue'
 
-defineOptions({ name: "ued-button" });
+defineOptions({ name: 'ued-button' })
 
 type ButtonProps = {
-  type?: string;
-};
+	type?: string
+}
 
-const buttonProps = defineProps<ButtonProps>();
+const buttonProps = defineProps<ButtonProps>()
 
 const buttonStyle = computed(() => {
-  return { [`ued-button--${ buttonProps.type }`]: buttonProps.type };
-});
+	return { [`ued-button--${buttonProps.type}`]: buttonProps.type }
+})
 </script>
