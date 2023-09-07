@@ -8,12 +8,22 @@
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
     "lint:style": "stylelint --fix \"**/*.{css,less}\"",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+      "stylelint --fix \"packages/components/src/**/*.{css,less}\""
+    ]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/gulp": "^4.0.13",
     "@types/gulp-autoprefixer": "^0.0.34",
     "@types/gulp-less": "^0.0.33",
@@ -33,7 +43,9 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-less": "^5.0.0",
     "happy-dom": "^10.11.2",
+    "husky": "^8.0.3",
     "less": "^4.2.0",
+    "lint-staged": "^14.0.1",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.3",
     "stylelint": "^15.10.3",
