@@ -10,7 +10,9 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "feature": "sh ./scripts/shell/feature.sh",
+    "release": "sh ./scripts/shell/release.sh"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,vue}": [
@@ -35,6 +37,10 @@
     "@vue/runtime-core": "^3.3.4",
     "@vue/test-utils": "^2.4.1",
     "c8": "^8.0.1",
+    "commitizen": "^4.3.0",
+    "conventional-changelog": "^4.0.0",
+    "conventional-changelog-cli": "^3.0.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -62,5 +68,10 @@
     "vite-plugin-dts": "1.4.1",
     "vitest": "^0.34.3",
     "vue": "^3.2.36"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
