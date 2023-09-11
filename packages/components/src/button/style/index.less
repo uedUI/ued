@@ -1,3 +1,5 @@
+@import url('../../../../theme/common/var.less');
+
 .ued-button {
 	box-sizing: border-box;
 	display: inline-block;
@@ -18,13 +20,7 @@
 
 	&--primary {
 		color: #fff;
-		background-color: #409eff;
-		border-color: #409eff;
-
-		&:hover {
-			color: #fff;
-			background: #66b1ff;
-			border-color: #66b1ff;
-		}
+		background-color: @color-primary;
+		border-color: @color-primary;
 	}
 }
