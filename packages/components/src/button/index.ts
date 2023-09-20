@@ -10,5 +10,5 @@ const withInstall = <T>(comp: T) => {
 	}
 	return comp as SFCWithInstall<T>
 }
-export const Button = withInstall(_Button)
-export default Button
+export const UedButton = withInstall(_Button)
+export default UedButton

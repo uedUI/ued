@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
-import ued from '#ued'
+import ued from 'ued-vue3'
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app }) => {
