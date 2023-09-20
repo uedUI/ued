@@ -1,12 +1,12 @@
 {
   "name": "ued",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build:ued": "gulp -f packages/components/scripts/build/index.ts",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
-    "lint:style": "stylelint --fix \"**/*.{css,less}\"",
+    "lint:style": "stylelint --fix \"packages/**/*.{css,less}\"",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "prepare": "husky install",
@@ -15,8 +15,10 @@
     "release": "sh ./scripts/shell/release.sh"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,vue}": [
-      "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+    "**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./"
+    ],
+    "**/*.{css,less}": [
       "stylelint --fix \"packages/components/src/**/*.{css,less}\""
     ]
   },
