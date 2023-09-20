@@ -4,3 +4,4 @@ dist/
 expand/**
 packages/ued/**
 coverage/**
+site/docs/.vitepress/cache

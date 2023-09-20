@@ -11,14 +11,14 @@
     "docs:preview": "vitepress preview docs --port 9091",
     "docs:publish": "sh deploy.sh"
   },
-  "imports": { 
-    "#ued": "../packages/ued/es"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "vitepress": "1.0.0-rc.10",
     "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "ued-vue3": "workspace:^"
   }
 }
